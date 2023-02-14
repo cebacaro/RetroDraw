@@ -26,8 +26,7 @@ const App = () => {
    * - activeColor, setActiveColor initialized to COLORS[0]
    * - cellList, setCellList initialized to buildCellList()
    */
-  const [activeColor, setActiveColor] = useState([]);
-  activeColor(COLORS[0]);
+  const [activeColor, setActiveColor] = useState(COLORS[0]);
 
   return (
     <div className="app">
