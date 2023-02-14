@@ -27,6 +27,7 @@ const App = () => {
    * - cellList, setCellList initialized to buildCellList()
    */
   const [activeColor, setActiveColor] = useState(COLORS[0]);
+  const [cellList, setCellList] = useState(buildCellList());
 
   return (
     <div className="app">
@@ -35,7 +36,11 @@ const App = () => {
       {/* Palette needs to be passed activeColor and setActiveColor */}
       <Palette setActiveColor={setActiveColor} activeColor={activeColor} />
       {/* Grid needs to be passed activeColor, cellList, and setCellList */}
-      <Grid />
+      <Grid
+        setCellList={setCellList}
+        cellList={cellList}
+        activeColor={activeColor}
+      />
       {/* ActionPanel needs to be passed activeColor, cellList, and setCellList */}
       <ActionPanel />
     </div>
