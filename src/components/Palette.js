@@ -30,7 +30,7 @@ const Palette = (props) => {
     <div className="palette">
       {COLORS.length ? (
         COLORS.map((color, idx) => {
-          return <Cell key={`palette-${idx}`} />;
+          return <Cell key={`palette-${idx}`} color={color} isActive={activeColor === color} handleClick={setActiveColor}/>;
         })
       ) : (
         <h1>loading</h1>
