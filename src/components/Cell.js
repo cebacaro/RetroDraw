@@ -30,7 +30,7 @@ const Cell = (props) => {
 
 
 
-  return <div className={"cell"+isActiveName} style={"backgroundColor:"+color} onClick={handleClick}></div>
+  return <div className={`cell+${isActiveName}`} style={`background: ${color}`} onClick={`${handleClick}`}></div>
 }
 
 export default Cell;
